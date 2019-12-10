@@ -1,12 +1,20 @@
 import sqlite3
 
 def text_hello(other):
-    print("-" * 100)
-    if other == 0:
-        print("*\t\t\tSelect Homework below !!!\t\t\t*")
-    else:
-        print("*\t\t\tSelect Other Homework below !!!\t\t\t*")
-    print("-" * 100)
+    try:
+        print("-" * 100)
+        if other == 0:
+            print("*\t\t\t\033[0;34;43mSelect Homework below !!!\033[0;0m\t\t\t*")
+        else:
+            print("*\t\t\t\033[0;34;43mSelect Other Homework below !!!\033[0;0m\t\t\t*")
+        print("-" * 100)
+        select_quiz = int(input("Select No. Of Homework (1-10 or 0 for Autorun) for Check : "))
+        print("-" * 100)
+        select_to_run(select_quiz)
+    except Exception as e:
+        print("-" * 100)
+        print("\033[0;31;40m ERROR !!!\033[0;0m >>>>>>>>>> {}".format(e))
+        text_hello(0)
 
 def showReport(cmd, sql_command, param_select):
     myDatabase = "AppData/Sqlite_Northwind.sqlite3"
@@ -229,56 +237,55 @@ def pracSqlExtra10():
     showReport(cmd, sql_command, param_select)
 
 def select_to_run(select_quiz):
+    try:
+        if select_quiz == 0:
+            Practice336()
+            Practice338()
+            pracSqlExtra3()
+            pracSqlExtra4()
+            pracSqlExtra5()
+            pracSqlExtra6()
+            pracSqlExtra7()
+            pracSqlExtra8()
+            pracSqlExtra9()
+            pracSqlExtra10()
 
-    if select_quiz == 0:
-        Practice336()
-        Practice338()
-        pracSqlExtra3()
-        pracSqlExtra4()
-        pracSqlExtra5()
-        pracSqlExtra6()
-        pracSqlExtra7()
-        pracSqlExtra8()
-        pracSqlExtra9()
-        pracSqlExtra10()
+        elif select_quiz == 1:
+            Practice336()
 
-    elif select_quiz == 1:
-        Practice336()
+        elif select_quiz == 2:
+            Practice338()
 
-    elif select_quiz == 2:
-        Practice338()
+        elif select_quiz == 3:
+            pracSqlExtra3()
+        elif select_quiz == 4:
+            pracSqlExtra4()
 
-    elif select_quiz == 3:
-        pracSqlExtra3()
-    elif select_quiz == 4:
-        pracSqlExtra4()
+        elif select_quiz == 5:
+            pracSqlExtra5()
 
-    elif select_quiz == 5:
-        pracSqlExtra5()
+        elif select_quiz == 6:
+            pracSqlExtra6()
 
-    elif select_quiz == 6:
-        pracSqlExtra6()
+        elif select_quiz == 7:
+            pracSqlExtra7()
 
-    elif select_quiz == 7:
-        pracSqlExtra7()
+        elif select_quiz == 8:
+            pracSqlExtra8()
 
-    elif select_quiz == 8:
-        pracSqlExtra8()
+        elif select_quiz == 9:
+            pracSqlExtra9()
 
-    elif select_quiz == 9:
-        pracSqlExtra9()
+        elif select_quiz == 10:
+            pracSqlExtra10()
 
-    elif select_quiz == 10:
-        pracSqlExtra10()
-
-    text_hello(1)
-    select_quiz = int(input("Select No. Of Homework (1-10 or 0 for Autorun) for Check : "))
-    print("-" * 100)
-    select_to_run(select_quiz)
+        text_hello(1)
+    except Exception as e:
+        print("-"*100)
+        print("\033[0;31;40m ERROR !!!\033[0;0m >>>>>>>>>> {}".format(e))
+        text_hello(0)
 
 if __name__ == '__main__':
     text_hello(0)
-    select_quiz = int(input("Select No. Of Homework (1-10 or 0 for Autorun) for Check : "))
-    print("-"*100)
-    select_to_run(select_quiz)
+
 
