@@ -1,5 +1,21 @@
 import sqlite3
 
+def text_hello(other):
+    try:
+        print("-" * 100)
+        if other == 0:
+            print("*\t\t\t\033[0;34;43mSelect Homework below !!!\033[0;0m\t\t\t*")
+        else:
+            print("*\t\t\t\033[0;34;43mSelect Other Homework below !!!\033[0;0m\t\t\t*")
+        print("-" * 100)
+        select_quiz = input("Fill Name Of Homework ([create] [add] [change] [delete] or [all] for Autorun) for Check : ")
+        print("-" * 100)
+        select_to_run(select_quiz)
+    except Exception as e:
+        print("-" * 100)
+        print("\033[0;31;40m ERROR !!!\033[0;0m >>>>>>>>>> {}".format(e))
+        text_hello(0)
+
 def Report(cmd,sql_command,param_select):
 
     myDatabase = "AppData/Sqlite_Northwind.sqlite3"
@@ -21,6 +37,9 @@ def Report(cmd,sql_command,param_select):
             cursor = conn.execute(sql_command, param_select)
             for i in cursor:
                 print("Data --> {} | {}".format(i["CustomerId"],i["ShipRegion"]))
+
+        if cmd == "del_y":
+            conn.executescript(sql_command)
 
         elif cmd == "create":
             conn.executescript(sql_command)
@@ -58,7 +77,7 @@ def changeSuppliers():
                          SET ContactName = ?
                          WHERE SupplierID = ?;
                          """
-    Report(cmd,sql_command,[Sup_new_contactname,Sup_id])
+        Report(cmd,sql_command,[Sup_new_contactname,Sup_id])
 
 def delOrderID():
     cmd = "del"
@@ -73,18 +92,22 @@ def delOrderID():
 
     select = input("Do you want to Delete data? [Y/N] : ").lower()
 
-    # if select == "y":
-    #     cmd = "del_y"
-    #     sql_command = """UPDATE Suppliers
-    #                      SET ContactName = ?
-    #                      WHERE SupplierID = ?;
-    #                      """
-    # Report(cmd,sql_command,[])
-
-
-    #รับข้อมูล Order ID ที่จะลบ
-    #แสดงข้อมูล Order ID
-    #ถามผู้ใช้ว่าจะลบไหม
+    if select == "y":
+        cmd = "del_y"
+        sql_command = """BEGIN TRANSACTION;
+                         DELETE FROM OrdersDetails
+                         WHERE OrderId= {};
+                         DELETE FROM Orders
+                         WHERE OrderID= {};
+                         ROLLBACK;""".format(Order_id,Order_id)
+        Report(cmd,sql_command,[])
+        print("*"*100)
+        print("Delete Success! ===[next]===> Rollback to default database by ROLLBACK function")
+        print("*" * 100)
+    else:
+        print("*" * 20)
+        print("Exit this function")
+        print("*" * 20)
 
 def genDatabase():
     cmd = "create"
@@ -95,11 +118,33 @@ def genDatabase():
                      `GENDER` TEXT);"""
     Report(cmd,sql_command,[])
 
-if __name__ == '__main__':
+def select_to_run(select_quiz):
+    try:
+        if select_quiz == "all":
+            addNewCategory()
+            changeSuppliers()
+            delOrderID()
+            genDatabase()
 
-    #addNewCategory()
-    #changeSuppliers()
-    delOrderID()
+        elif select_quiz == "add":
+            addNewCategory()
+
+        elif select_quiz == "change":
+            changeSuppliers()
+
+        elif select_quiz == "delete":
+            delOrderID()
+        elif select_quiz == "create":
+            genDatabase()
+
+        text_hello(1)
+    except Exception as e:
+        print("-"*100)
+        print("\033[0;31;40m ERROR !!!\033[0;0m >>>>>>>>>> {}".format(e))
+        text_hello(0)
+
+if __name__ == '__main__':
+    text_hello(0)
 
 
 

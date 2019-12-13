@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46aaef2b-9460-4928-94f1-7945683c8c1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week4/Fri/pySqlite_homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/Week4/Fri/pySqlite_homework.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week4/Fri/pracSql9_export.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week4/Fri/pySqlite_homework_withCSV.py" beforeDir="false" afterPath="$PROJECT_DIR$/Week5/pySqlite_homework_withCSV.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week5/AppData/Sqlite_Northwind.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Week5/AppData/Sqlite_Northwind.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week5/AppData/Sqlite_Northwind.sqlite3-journal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week5/InsertDB.py" beforeDir="false" afterPath="$PROJECT_DIR$/Week5/InsertDB.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,10 +25,37 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\TNI\Python\PythonClass_git\Week5" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.InsertDB">
+    <configuration name="InsertDB" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonClass_git" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Week5" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Week5/InsertDB.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="pySqlite_homework" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonClass_git" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -47,8 +77,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pySqlite_homework_withCSV" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonClass_git" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Week5" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Week5/pySqlite_homework_withCSV.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.InsertDB" />
+        <item itemvalue="Python.pySqlite_homework_withCSV" />
         <item itemvalue="Python.pySqlite_homework" />
       </list>
     </recent_temporary>
@@ -79,21 +132,21 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1575999698080">
+    <state width="1882" height="279" key="GridCell.Tab.0.bottom" timestamp="1576247564623">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1575999698080" />
-    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1575999698080">
+    <state width="1882" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1576247564623" />
+    <state width="1882" height="279" key="GridCell.Tab.0.center" timestamp="1576247564623">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1575999698080" />
-    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1575999698080">
+    <state width="1882" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1576247564623" />
+    <state width="1882" height="279" key="GridCell.Tab.0.left" timestamp="1576247564623">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1575999698080" />
-    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1575999698080">
+    <state width="1882" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1576247564623" />
+    <state width="1882" height="279" key="GridCell.Tab.0.right" timestamp="1576247564623">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1575999698080" />
+    <state width="1882" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576247564623" />
   </component>
 </project>

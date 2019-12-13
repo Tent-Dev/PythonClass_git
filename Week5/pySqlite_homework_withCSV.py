@@ -6,7 +6,7 @@ def write_csv(filename, data, mode):
     print("----->",data)
     with open(filename, mode, newline="", encoding="utf8") as f:
         fw = csv.writer(f,quoting=csv.QUOTE_NONNUMERIC)
-        fw.writerows(data)
+        fw.writerow(data)
 
 def text_hello(other):
     try:
@@ -102,7 +102,7 @@ def showReport(cmd, sql_command, param_select):
             print("-" * 50)
             print("Send by : {}".format(i["SendBy"]))
 
-            my_file = "pracSql9_export.csv"
+            my_file = "csv/pracSql9_export.csv"
             param_select.append(((total_price * 7) / 100)+total_price)
             Exist = os.path.exists(my_file)
 
