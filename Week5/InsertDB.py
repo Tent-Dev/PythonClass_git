@@ -78,6 +78,10 @@ def changeSuppliers():
                          WHERE SupplierID = ?;
                          """
         Report(cmd,sql_command,[Sup_new_contactname,Sup_id])
+    else:
+        print("*" * 20)
+        print("Exit this function")
+        print("*" * 20)
 
 def delOrderID():
     cmd = "del"

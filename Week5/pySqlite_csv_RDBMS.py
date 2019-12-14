@@ -15,11 +15,75 @@ def text_hello(other):
         else:
             print("*\t\t\t\033[0;34;43mSelect Other Homework below !!!\033[0;0m\t\t\t*")
         print("-" * 100)
-        select_quiz = int(input("Select No. Of Homework (1-10 or 0 for Autorun) for Check : "))
+        select_quiz = input("Select No. / Name Of Homework (1-10, [create] [add] [change] [delete] or 0 for Autorun) for Check : ")
         print("-" * 100)
         select_to_run(select_quiz)
     except Exception as e:
         print("-" * 100)
+        print("\033[0;31;40m ERROR !!!\033[0;0m >>>>>>>>>> {}".format(e))
+        text_hello(0)
+
+def select_to_run(select_quiz):
+    try:
+        if select_quiz == "0":
+            Practice336()
+            Practice338()
+            pracSqlExtra3()
+            pracSqlExtra4()
+            pracSqlExtra5()
+            pracSqlExtra6()
+            pracSqlExtra7()
+            pracSqlExtra8()
+            pracSqlExtra9()
+            pracSqlExtra10()
+            addNewCategory()
+            changeSuppliers()
+            delOrderID()
+            genDatabase()
+
+        elif select_quiz == "1":
+            Practice336()
+
+        elif select_quiz == "2":
+            Practice338()
+
+        elif select_quiz == "3":
+            pracSqlExtra3()
+        elif select_quiz == "4":
+            pracSqlExtra4()
+
+        elif select_quiz == "5":
+            pracSqlExtra5()
+
+        elif select_quiz == "6":
+            pracSqlExtra6()
+
+        elif select_quiz == "7":
+            pracSqlExtra7()
+
+        elif select_quiz == "8":
+            pracSqlExtra8()
+
+        elif select_quiz == "9":
+            pracSqlExtra9()
+
+        elif select_quiz == "10":
+            pracSqlExtra10()
+
+        elif select_quiz == "add":
+            addNewCategory()
+
+        elif select_quiz == "change":
+            changeSuppliers()
+
+        elif select_quiz == "delete":
+            delOrderID()
+        elif select_quiz == "create":
+            genDatabase()
+
+        text_hello(1)
+    except Exception as e:
+        print("-"*100)
         print("\033[0;31;40m ERROR !!!\033[0;0m >>>>>>>>>> {}".format(e))
         text_hello(0)
 
@@ -120,6 +184,28 @@ def showReport(cmd, sql_command, param_select):
             for i in cursor:
                 print("{:15} {:10} {:25,.2f} {:25,.2f}".format(i["Country"], i["NoOfOrder"],i["NetPrice"],i["PricePerOrder"]))  # Tuple
                 j += 1
+
+        elif cmd == "add":
+            conn.executescript(sql_command)  # executescript ทำหลายคำสั่ง แต่รบ Parameter ได้แค่ 1
+
+        elif cmd == "edit":
+            cursor = conn.execute(sql_command, param_select)
+            for i in cursor:
+                print("Data --> {}".format(i["ContactName"]))
+
+        elif cmd == "edit_y":
+            conn.execute(sql_command, param_select)
+
+        elif cmd == "del":
+            cursor = conn.execute(sql_command, param_select)
+            for i in cursor:
+                print("Data --> {} | {}".format(i["CustomerId"],i["ShipRegion"]))
+
+        if cmd == "del_y":
+            conn.executescript(sql_command)
+
+        elif cmd == "create":
+            conn.executescript(sql_command)
 
     except Exception as e:
         print("Error {}".format(e))
@@ -254,54 +340,81 @@ def pracSqlExtra10():
     param_select = []
     showReport(cmd, sql_command, param_select)
 
-def select_to_run(select_quiz):
-    try:
-        if select_quiz == 0:
-            Practice336()
-            Practice338()
-            pracSqlExtra3()
-            pracSqlExtra4()
-            pracSqlExtra5()
-            pracSqlExtra6()
-            pracSqlExtra7()
-            pracSqlExtra8()
-            pracSqlExtra9()
-            pracSqlExtra10()
+def addNewCategory():
+    cmd = "add"
+    cate_name = input("Insert Category name : ")
+    cate_desc = input("Insert Category description : ")
 
-        elif select_quiz == 1:
-            Practice336()
+    sql_command = """BEGIN;
+                     INSERT INTO Categories (CategoryName, Description)
+                     VALUES ({}, {});
+                     COMMIT;""".format(cate_name,cate_desc) #ต้อง COMMIT ถึงจะเข้า DB จริงๆ
 
-        elif select_quiz == 2:
-            Practice338()
+    showReport(cmd,sql_command)
 
-        elif select_quiz == 3:
-            pracSqlExtra3()
-        elif select_quiz == 4:
-            pracSqlExtra4()
+def changeSuppliers():
+    cmd = "edit"
+    Sup_id = input("Fill Supplier ID : ")
 
-        elif select_quiz == 5:
-            pracSqlExtra5()
+    param_select = [Sup_id]
 
-        elif select_quiz == 6:
-            pracSqlExtra6()
+    sql_command = """SELECT ContactName FROM Suppliers WHERE SupplierID = ?"""
 
-        elif select_quiz == 7:
-            pracSqlExtra7()
+    showReport(cmd,sql_command,param_select)
 
-        elif select_quiz == 8:
-            pracSqlExtra8()
+    select = input("Do you want to Edit data? [Y/N] : ").lower()
 
-        elif select_quiz == 9:
-            pracSqlExtra9()
+    if select == "y":
+        cmd = "edit_y"
+        Sup_new_contactname = input("Fill New contact name : ")
+        sql_command = """UPDATE Suppliers
+                         SET ContactName = ?
+                         WHERE SupplierID = ?;
+                         """
+        showReport(cmd,sql_command,[Sup_new_contactname,Sup_id])
+    else:
+        print("*" * 20)
+        print("Exit this function")
+        print("*" * 20)
 
-        elif select_quiz == 10:
-            pracSqlExtra10()
+def delOrderID():
+    cmd = "del"
 
-        text_hello(1)
-    except Exception as e:
-        print("-"*100)
-        print("\033[0;31;40m ERROR !!!\033[0;0m >>>>>>>>>> {}".format(e))
-        text_hello(0)
+    Order_id = input("Fill Order ID : ")
+
+    param_select = [Order_id]
+
+    sql_command = """SELECT OrderID, CustomerId, ShipRegion FROM Orders WHERE OrderID = ?"""
+
+    showReport(cmd,sql_command,param_select)
+
+    select = input("Do you want to Delete data? [Y/N] : ").lower()
+
+    if select == "y":
+        cmd = "del_y"
+        sql_command = """BEGIN TRANSACTION;
+                         DELETE FROM OrdersDetails
+                         WHERE OrderId= {};
+                         DELETE FROM Orders
+                         WHERE OrderID= {};
+                         ROLLBACK;""".format(Order_id,Order_id)
+        showReport(cmd,sql_command,[])
+        print("*"*100)
+        print("Delete Success! ===[next]===> Rollback to default database by ROLLBACK function")
+        print("*" * 100)
+    else:
+        print("*" * 20)
+        print("Exit this function")
+        print("*" * 20)
+
+def genDatabase():
+    cmd = "create"
+    sql_command = """CREATE TABLE `student` (
+                     `ID` INTEGER PRIMARY KEY AUTOINCREMENT,
+                     `FIRSTNAME` TEXT UNIQUE,
+                     `LASTNAME` TEXT,
+                     `GENDER` TEXT);"""
+    showReport(cmd,sql_command,[])
 
 if __name__ == '__main__':
     text_hello(0)
