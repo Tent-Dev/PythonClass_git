@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46aaef2b-9460-4928-94f1-7945683c8c1d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/PythonClass_git.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonClass_git.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week5/InsertDB.py" beforeDir="false" afterPath="$PROJECT_DIR$/Week5/InsertDB.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week5/csv/pracSql9_export.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Week5/csv/pracSql9_export.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week5/pySqlite_homework_withCSV.py" beforeDir="false" afterPath="$PROJECT_DIR$/Week5/pySqlite_homework_withCSV.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week6/Homework/SaveAddress.py" beforeDir="false" afterPath="$PROJECT_DIR$/Week6/Homework/SaveAddress.py" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,13 +34,27 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\TNI\Python\PythonClass_git\Week5" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.pySqlite_csv_RDBMS">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.SaveAddress">
     <configuration name="InsertDB" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonClass_git" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -53,6 +68,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Week5/InsertDB.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SaveAddress" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonClass_git" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="E:\TNI\Python\Homework1\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Week6/Homework" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Week6/Homework/SaveAddress.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -126,24 +162,13 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.SaveAddress" />
         <item itemvalue="Python.pySqlite_csv_RDBMS" />
         <item itemvalue="Python.InsertDB" />
         <item itemvalue="Python.pySqlite_homework_withCSV" />
         <item itemvalue="Python.pySqlite_homework" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -157,6 +182,17 @@
       <updated>1575997759965</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state width="1882" height="279" key="GridCell.Tab.0.bottom" timestamp="1576301281142">
