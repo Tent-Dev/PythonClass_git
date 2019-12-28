@@ -36,6 +36,10 @@ with open("Text/RawAddressData.txt", mode="r",encoding="utf-16") as rf:
                 json_data[i]["Aumpoar"] =  word_sp[j]
 
             if "จ." in word_sp[j]:
+                if j + 1 < len(word_sp) and (not word_sp[j+1].isnumeric()):
+                    word_sp[j+1] = word_sp[j+1].rsplit('จ.',1)[0].rsplit('ซ.',1)[0].rsplit('ต.',1)[0]
+                    word_sp[j] = word_sp[j]+word_sp[j+1]
+                    #print("------->{}".format(word_sp[j]))
                 json_data[i]["Country"] =  word_sp[j]
 
             if "ซ." in word_sp[j]:
