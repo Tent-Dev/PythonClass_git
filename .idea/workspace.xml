@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46aaef2b-9460-4928-94f1-7945683c8c1d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/PythonClass_git.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonClass_git.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Week6/Homework/SaveAddress.py" beforeDir="false" afterPath="$PROJECT_DIR$/Week6/Homework/SaveAddress.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week8/Cloud.py" beforeDir="false" afterPath="$PROJECT_DIR$/Week8/Cloud.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,26 +35,35 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\TNI\Python\PythonClass_git\Week5" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="Python.SaveAddress">
+    <configuration name="Cloud" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonClass_git" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Week8" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Week8/Cloud.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="InsertDB" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonClass_git" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -116,27 +127,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pySqlite_homework" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PythonClass_git" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Week4/Fri" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Week4/Fri/pySqlite_homework.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="pySqlite_homework_withCSV" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonClass_git" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -161,12 +151,24 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.SaveAddress" />
+        <item itemvalue="Python.Cloud" />
         <item itemvalue="Python.pySqlite_csv_RDBMS" />
         <item itemvalue="Python.InsertDB" />
         <item itemvalue="Python.pySqlite_homework_withCSV" />
-        <item itemvalue="Python.pySqlite_homework" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -195,25 +197,41 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1899" height="279" key="GridCell.Tab.0.bottom" timestamp="1577455280679">
+    <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1578239107655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1577455280679" />
-    <state width="1899" height="279" key="GridCell.Tab.0.center" timestamp="1577455280679">
+    <state width="1899" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578239107655" />
+    <state width="1899" height="348" key="GridCell.Tab.0.center" timestamp="1578239107655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1577455280679" />
-    <state width="1899" height="279" key="GridCell.Tab.0.left" timestamp="1577455280678">
+    <state width="1899" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578239107655" />
+    <state width="1899" height="348" key="GridCell.Tab.0.left" timestamp="1578239107655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1577455280678" />
-    <state width="1899" height="279" key="GridCell.Tab.0.right" timestamp="1577455280679">
+    <state width="1899" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578239107655" />
+    <state width="1899" height="348" key="GridCell.Tab.0.right" timestamp="1578239107655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1577455280679" />
-    <state x="686" y="192" key="SettingsEditor" timestamp="1577443291984">
+    <state width="1899" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578239107655" />
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1578239107655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="686" y="192" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1577443291984" />
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578239107655" />
+    <state width="1899" height="348" key="GridCell.Tab.1.center" timestamp="1578239107655">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578239107655" />
+    <state width="1899" height="348" key="GridCell.Tab.1.left" timestamp="1578239107655">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578239107655" />
+    <state width="1899" height="348" key="GridCell.Tab.1.right" timestamp="1578239107655">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578239107655" />
+    <state x="527" y="245" key="SettingsEditor" timestamp="1578220451474">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="527" y="245" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1578220451474" />
   </component>
 </project>
