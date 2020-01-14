@@ -19,4 +19,4 @@ db.Products.update({'pbrand':'Acer'},{'$set':{'pprice':10000}},{'multi':true}) /
 
 db.Products.remove({'pbrand':'Acer'})
 
-db.Products.remove({'pbrand':'Acer'})
+db.Products.remove({'$and':[{'psize':{'$lt':5}},{'pprice':{'$lt':5000}}]})
